@@ -6,7 +6,7 @@ $base = getenv("MYSQLDATABASE");
 $port = getenv("MYSQLPORT");
 
 // Connexion à MySQL
-$conn = new PDO($serveur, $utilisateur, $motdepasse, $base, $port);
+$conn = new mysqli($serveur, $utilisateur, $motdepasse, $base, $port);
 
 // Vérifier si la connexion a échoué
 if ($conn->connect_error) {
@@ -17,6 +17,7 @@ if ($conn->connect_error) {
 $conn->set_charset("utf8");
 
 ?>
+
 
 
 
