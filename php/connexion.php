@@ -1,8 +1,9 @@
 <?php
-$serveur = "interchange.proxy.rlwy.net:33921";      // généralement localhost en local
-$utilisateur = "root";       // ton nom d'utilisateur MySQL
-$motdepasse = "UndWgwxnOvruVsiYQAYEfcFOQYvZhrJH";            // ton mot de passe MySQL (souvent vide en local)
-$base = "majoraly";        // le nom de ta base de données
+$serveur = getenv("MYSQLHOST");
+$utilisateur = getenv("MYSQLUSER");
+$motdepasse = getenv("MYSQLPASSWORD");
+$base = getenv("MYSQLDATABASE");
+$port = getenv("MYSQLPORT");
 
 // Connexion à MySQL
 $conn = new mysqli($serveur, $utilisateur, $motdepasse, $base);
@@ -16,3 +17,4 @@ if ($conn->connect_error) {
 $conn->set_charset("utf8");
 
 ?>
+
