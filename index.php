@@ -83,7 +83,7 @@
             <div class="services-container">
                 <div class="blocks">
                     <p>Nous vous assistons pour toutes vos cérémonies, et nous nous assurons de rendre chaque instant inoubliable.</p>
-                    <a href="reservation.html">Réservez dès maintenant</a>
+                    <a href="reservation.php">Réservez dès maintenant</a>
                 </div>
                 <div class="blocks">
                     <div class="service">
@@ -174,4 +174,5 @@
        </div>
     </footer>
 </body>
+
 </html>
