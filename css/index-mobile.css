@@ -1,0 +1,84 @@
+@media screen and (max-width: 768px) {
+    section{
+        height: calc(100svh - 5rem);
+    }
+
+    #about{
+        .view{
+            font-size: 0.6rem;
+            top: 40%;
+            height: 30%;
+        }
+    }
+
+    #menu{
+        .menu-container{
+            height: 65%;
+        }
+        .menu-container>div{
+            width: 40%;
+            height: 45%;
+            img{
+                height: 35%;
+            }
+
+            h5{
+                font-size: 0.6rem;
+            }
+
+            p{
+                font-size: 0.7rem;
+                height: 30%;
+            }
+        }
+
+        a{
+            font-size: 0.5rem;
+        }
+    }
+
+    #services{
+        .services-container{
+            .blocks:first-of-type{
+                height: 70%;
+                gap: 10%;
+                p{
+                    font-size: 0.8rem;
+                }
+
+                a{
+                    font-size: 0.5rem;
+                }
+            }
+
+            .blocks:last-of-type{
+
+                h5{
+                    font-size: 0.6rem;
+                }
+
+                p{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+
+    /* #avis{
+        display: none;
+    } */
+
+    #contact form fieldset label{
+        font-size: 0.8rem !important;
+
+        input::placeholder, textarea::placeholder{
+            font-size: 0.8rem !important;
+        }
+    }
+
+    #contact form input[type ="submit"]{
+        width: 40% !important;
+        font-size: 0.6rem !important;
+        padding: 0.2rem !important;
+    }
+}

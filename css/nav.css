@@ -1,0 +1,167 @@
+:root{
+    --a-standard: #e5e7eb;
+    /* --a-hover: #a12720; */
+    --a-hover: #d7191c;
+    --a-active: #e60000;
+    /* --a-active: ; */
+    --nav-bg: #212121;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-color: var(--nav-bg);
+    color: #f9f9f9;
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+    top: 0;
+    z-index: 1000;
+
+    .logo{
+        width: 20%;
+        height: 100%;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-style: italic;
+
+        img{
+            width: 50%;
+            height: 60%;
+            mix-blend-mode: difference;
+            filter: brightness(2.2);
+        }
+    }
+
+    .menu{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 2rem;
+
+        input{
+            display: none;
+        }
+
+        label{
+            position: relative;
+            display: none;
+            align-items: center;
+            font-size: 1.5rem;
+            height: 100%;
+            width: 2%;
+
+            span{
+                position: absolute;
+                transition: visibility ease 0.8s, opacity ease-in-out 1s;
+            }
+
+            .bi-chevron-contract{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        .links{
+            display: flex;
+            height: 100%;
+            width: 70%;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 1.2rem;
+
+            a{
+                color: var(--a-standard);
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+
+            a:hover{
+                /* color: #e22727; */
+                color: var(--a-hover);
+            }
+
+            a.active{
+                color: var(--a-active);
+            }
+
+            a[href="#avis"]{
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    nav{
+        .menu{
+            position: relative;
+
+            label{
+                display: flex;
+            }
+
+            .links{
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                height: 15rem;
+                /* border: 1px solid blueviolet; */
+                /* display: none; */
+                visibility: hidden;
+                flex-direction: column;
+                font-size: 1rem;
+                width: 40% !important;
+                justify-content: space-around;
+                background-color: #070707a2;
+                transition: all ease 0.5s;
+                /* gap: 1.2rem; */
+                
+                a{
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
+        }
+
+        .menu:has(input:checked){
+            label{
+                .bi-list{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
+                .bi-chevron-contract{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            .links{
+                /* display: flex; */
+                visibility: visible;
+                transition: all ease 0.5s;
+
+                a{
+                    pointer-events: initial;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
