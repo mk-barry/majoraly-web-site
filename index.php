@@ -167,7 +167,7 @@
     </main>
     <footer>
        <div class="design">
-        <p>Designé par <span class="blue">Barry</span> avec HTML and CSS</p>
+        <p>Designé par <span class="blue">Majoraly</span></p>
        </div>
        <div class="right">
         <p>Tous droits réservés &copy; 2025.</p>
@@ -176,3 +176,4 @@
 </body>
 
 </html>
+
